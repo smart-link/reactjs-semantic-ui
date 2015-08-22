@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Reactjs Semantic Ui </title>
+</head>
+<body style="margin-left: 20px; margin-top: 20px;">
+
+    <div id="app"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+    <script src="../../dist/reactjs-semantic-ui.js"></script>
+
+    <script type="text/jsx;harmony=true" src="./CardExample.js"></script>
+
+    <script type="text/jsx;harmony=true">
+       // Card
+
+        function Alert(evt, reactId, msg) {
+          if(!msg) { msg = 'hello dowon'; }
+          console.log(evt);
+          console.log(reactId);
+          console.log(msg);
+          alert('Message: ' + msg);
+        }
+
+        React.render(
+            <CardExample />, document.getElementById('app')
+        );
+
+        //
+
+    </script>
+
+</body>
+</html>
