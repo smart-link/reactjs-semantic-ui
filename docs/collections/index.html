@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Reactjs Semantic UI </title>
+    <link rel="stylesheet" href="../../node_modules/semantic-ui-css/components/reset.css"/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/semantic-ui/2.0.8/semantic.css"/>
+</head>
+<body>
+
+<h1> Reactjs Semantic UI [Collections] </h1>
+<div id="app"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+<script type="text/jsx" src="../../dist/reactjs-semantic-ui.js"></script>
+<script type="text/jsx" src="./Breadcrumb.jsx"></script>
+<script type="text/jsx" src="./Form.jsx"></script>
+<script type="text/jsx" src="./Grid.jsx"></script>
+<script type="text/jsx" src="./Menu.jsx"></script>
+<script type="text/jsx" src="./Message.jsx"></script>
+<script type="text/jsx" src="./Table.jsx"></script>
+<script type="text/jsx">
+
+    var All = React.createClass({
+        render: function () {
+            return(
+                <div>
+                    <div className="ui top attached tabular menu">
+                        <div className="item">
+                            <h3>Breadcrumb</h3>
+                            <a href="http://semantic-ui.com/collections/breadcrumb.html" target="_blank"> Official Doc </a>
+                        </div>
+                    </div>
+                    <div className="ui bottom attached tabl segment">
+                        <BreadcrumbSystem></BreadcrumbSystem>
+                    </div>
+
+                    <div className="ui top attached tabular menu">
+                        <div className="item">
+                            <h3> Grid </h3>
+                            <a href="http://semantic-ui.com/collections/grid.html" target="_blank"> Official Doc </a>
+                        </div>
+                    </div>
+                    <div className="ui bottom attached tabl segment">
+                        <GridSystem></GridSystem>
+                    </div>
+
+                    <div className="ui top attached tabular menu">
+                        <div className="item">
+                            <h3> Form </h3>
+                            <a href="http://semantic-ui.com/collections/form.html" target="_blank"> Official Doc </a>
+                        </div>
+                    </div>
+                    <div className="ui bottom attached tabl segment">
+                        <FormSystem></FormSystem>
+                    </div>
+
+                    <div className="ui top attached tabular menu">
+                        <div className="item">
+                            <h3> Menu </h3>
+                            <a href="http://semantic-ui.com/collections/menu.html" target="_blank"> Official Doc </a>
+                        </div>
+                    </div>
+                    <div className="ui bottom attached tabl segment">
+                        <MenuSystem></MenuSystem>
+                    </div>
+
+                    <div className="ui top attached tabular menu">
+                        <div className="item">
+                            <h3> Message </h3>
+                            <a href="http://semantic-ui.com/collections/message.html" target="_blank"> Official Doc </a>
+                        </div>
+                    </div>
+                    <div className="ui bottom attached tabl segment">
+                        <MessageSystem></MessageSystem>
+                    </div>
+
+                    <div className="ui top attached tabular menu">
+                        <div className="item">
+                            <h3> Table </h3>
+                            <a href="http://semantic-ui.com/collections/table.html" target="_blank"> Official Doc </a>
+                        </div>
+                    </div>
+                    <div className="ui bottom attached tabl segment">
+                        <TableSystem></TableSystem>
+                    </div>
+                </div>
+            );
+        }
+    });
+
+    React.render(<All />,
+        document.getElementById('app'));
+</script>
+
+</body>
+</html>

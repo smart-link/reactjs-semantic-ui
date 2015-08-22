@@ -20,6 +20,16 @@ import Segment from './elements/Segment';
 import { Step, Steps } from './elements/Step';
 
 // Collections
+import Breadcrumb from './collections/Breadcrumb/Breadcrumb';
+import BreadcrumbDivider from './collections/Breadcrumb/BreadcrumbDivider';
+import BreadcrumbSection from './collections/Breadcrumb/BreadcrumbSection';
+import Form from './collections/Form/Form';
+import Grid from './collections/Grid/Grid';
+import Column from './collections/Grid/Column';
+import Row from './collections/Grid/Row';
+import Menu from './collections/Menu/Menu';
+import Message from './collections/Message/Message';
+import Table from './collections/Table/Table';
 
 // Views
 import Card from './views/card/Card';
@@ -30,6 +40,7 @@ import CardMeta from './views/card/CardMeta';
 import CardDescription from './views/card/CardDescription';
 
 const RSU = {
+    // Elements
     Button, Buttons,
     Container,
     Dimmer,
@@ -54,7 +65,19 @@ const RSU = {
     CardContent,
     CardHeader,
     CardMeta,
-    CardDescription
-};
+    CardDescription,
+
+    // Collections
+    Breadcrumb,
+    BreadcrumbDivider,
+    BreadcrumbSection,
+    Form,
+    Grid,
+    Row,
+    Column,
+    Menu,
+    Message,
+    Table
+}
 
 export default RSU;
