@@ -24,15 +24,5 @@ module.exports = {
 				loader: 'url-loader?limit=8192'
 			} // inline base64 URLs for <=8k images, direct URLs for the rest
         ]
-	},
-	externals: [
-		{
-			'react': {
-				root: 'React',
-				commonjs2: 'react',
-				commonjs: 'react',
-				amd: 'react'
-			}
-    }
-  ]
+	}
 };
