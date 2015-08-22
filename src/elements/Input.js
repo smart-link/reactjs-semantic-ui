@@ -11,32 +11,6 @@ const defaultProps = {
 	className: ''
 };
 
-/*
-	Ordering for React.createClass:
-
-	displayName
-	propTypes
-	contextTypes
-	childContextTypes
-	mixins
-	statics
-	defaultProps
-	getDefaultProps
-	getInitialState
-	getChildContext
-	componentWillMount
-	componentDidMount
-	componentWillReceiveProps
-	shouldComponentUpdate
-	componentWillUpdate
-	componentDidUpdate
-	componentWillUnmount
-	clickHandlers or eventHandlers like onClickSubmit() or onChangeDescription()
-	getter methods for render like getSelectReason() or getFooterContent()
-	Optional render methods like renderNavigation() or renderProfilePicture()
-	render
-*/
-
 @withStyles(input)
 class Input extends React.Component {
   constructor(props) {
@@ -59,7 +33,7 @@ class Input extends React.Component {
 	var componentClass = classNames('ui input', this.props.className);
 
     return (
-      <div className={componentClass}>
+      <div {...this.props} className={componentClass}>
 	  	{this.props.children}
 	  </div>
     )

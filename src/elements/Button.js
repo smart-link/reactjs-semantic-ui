@@ -59,7 +59,7 @@ class Button extends React.Component {
 	var componentClass = classNames('ui button', this.props.className);
 
     return (
-      <button className={componentClass}>
+      <button {...this.props} className={componentClass}>
         {this.props.children}
 	  </button>
     )
@@ -69,4 +69,47 @@ class Button extends React.Component {
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
 
-export default Button;
+const buttonsPropTypes = {
+	className: PropTypes.string,
+};
+
+const buttonsDefaultProps = {
+	className: ''
+};
+
+// @withStyles(button)
+class Buttons extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  };
+
+  componentWillMount() {};
+  componentDidMount() {};
+  componentWillReceiveProps(nextProps) {};
+  shouldComponentUpdate(nextProps, nextState) {
+    return true;
+  };
+  componentWillUpdate(nextProps, nextState) {};
+  componentDidUpdate(prevProps, prevState) {};
+  componentWillUnmount() {}
+
+  render() {
+	var componentClass = classNames('ui buttons', this.props.className);
+
+    return (
+      <div {...this.props} className={componentClass}>
+        {this.props.children}
+	  </div>
+    )
+  };
+}
+
+Buttons.propTypes = buttonsPropTypes;
+Buttons.defaultProps = buttonsDefaultProps;
+
+
+export default {
+	Button, Buttons
+};

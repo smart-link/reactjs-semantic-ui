@@ -6,6 +6,8 @@
 </head>
 <body>
 
+
+    <div id="button"></div>
     <div id="app"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min.js"></script>
@@ -14,9 +16,149 @@
     <script src="../../dist/reactjs-semantic-ui.js"></script>
 
 
+
+    <script type="text/jsx;harmony=true" src="./ButtonExample.js"></script>
+    <script type="text/jsx;harmony=true">
+        React.render(
+            <ButtonExample />, document.getElementById('button')
+        )
+    </script>
+
     <script type="text/jsx">
         React.render(
-            <RSU.Button>button</RSU.Button>, document.getElementById('app')
+            <div>
+                <h3><a href="http://semantic-ui.com/elements/button.html" target="_blank">button</a></h3>
+                <RSU.Segment>
+                    <RSU.Button>default</RSU.Button>
+                    <RSU.Divider />
+                    <RSU.Button className="primary">primary</RSU.Button>
+                    <RSU.Divider />
+                    <RSU.Button className="secondary">secondary</RSU.Button>
+                    <RSU.Divider />
+                    <RSU.Button className="labeld">labeld</RSU.Button>
+                    <RSU.Divider />
+                    <RSU.Button className="basic">basic</RSU.Button>
+                    <RSU.Divider />
+                    <RSU.Button className="orange inverted">orange inverted</RSU.Button>
+                    <RSU.Divider />
+                    <RSU.Buttons className="">
+                        <RSU.Button>group - one</RSU.Button>
+                        <RSU.Button>group - two</RSU.Button>
+                        <RSU.Button>group - three</RSU.Button>
+                    </RSU.Buttons>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/container.html" target="_blank">container</a></h3>
+                <RSU.Segment>
+                    <RSU.Container className="text">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa strong.
+                    </RSU.Container>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/divider.html" target="_blank">divider</a></h3>
+                <RSU.Segment>
+                    {/*<RSU.Divider className="vertical"></RSU.Divider>*/}
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/flag.html" target="_blank">flag</a></h3>
+                <RSU.Segment>
+                    <RSU.Flag></RSU.Flag>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/header.html" target="_blank">header</a></h3>
+                <RSU.Segment>
+                    <RSU.Header className="large">header</RSU.Header>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/icon.html" target="_blank">icon</a></h3>
+                <RSU.Segment>
+                    <RSU.Icon></RSU.Icon>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/image.html" target="_blank">image</a></h3>
+                <RSU.Segment>
+                    <RSU.Image></RSU.Image>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/input.html" target="_blank">input</a></h3>
+                <RSU.Segment>
+                    <RSU.Input>
+                        <input type="text" placeholder="Search..."/>
+                    </RSU.Input>
+                    <RSU.Divider />
+                    <RSU.Input className="labeled">
+                        <RSU.Label>
+                            http://
+                        </RSU.Label>
+                        <input type="text" placeholder="mysite.com" />
+                    </RSU.Input>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/label.html" target="_blank">label</a></h3>
+                <RSU.Segment>
+                    <RSU.Label>label</RSU.Label>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/list.html" target="_blank">list</a></h3>
+                <RSU.Segment>
+                    <RSU.List>
+                        <RSU.Item>one</RSU.Item>
+                        <RSU.Item>two</RSU.Item>
+                        <RSU.Item>three</RSU.Item>
+                    </RSU.List>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/loader.html" target="_blank">loader</a></h3>
+                <RSU.Segment>
+                    <RSU.Dimmer className="active">
+                        <RSU.Loader>loader</RSU.Loader>
+                    </RSU.Dimmer>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/rail.html" target="_blank">rail</a></h3>
+                <RSU.Segment>
+                    {/*<RSU.Rail></RSU.Rail>*/}
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/reveal.html" target="_blank">reveal</a></h3>
+                <RSU.Segment>
+                    <RSU.Reveal></RSU.Reveal>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/segment.html" target="_blank">segment</a></h3>
+                <RSU.Segment>
+                    <RSU.Segment className="raised">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                    </RSU.Segment>
+                    <RSU.Segment className="piled">
+                        <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
+                        <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
+                        <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
+                    </RSU.Segment>
+                    <RSU.Segment className="circular">
+                        <RSU.Header>
+                            Buy Now
+                            <div class="sub header">$10.99</div>
+                        </RSU.Header>
+                    </RSU.Segment>
+                </RSU.Segment>
+
+                <h3><a href="http://semantic-ui.com/elements/step.html" target="_blank">step</a></h3>
+                <RSU.Segment>
+                    <RSU.Steps className="">
+                        <RSU.Step>
+                            step 1
+                        </RSU.Step>
+                        <RSU.Step>
+                            step 2
+                        </RSU.Step>
+                        <RSU.Step>
+                            step 3
+                        </RSU.Step>
+                    </RSU.Steps>
+                </RSU.Segment>
+
+            </div>, document.getElementById('app')
         );
     </script>
 

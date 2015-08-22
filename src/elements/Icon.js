@@ -11,32 +11,6 @@ const defaultProps = {
 	className: ''
 };
 
-/*
-	Ordering for React.createClass:
-
-	displayName
-	propTypes
-	contextTypes
-	childContextTypes
-	mixins
-	statics
-	defaultProps
-	getDefaultProps
-	getInitialState
-	getChildContext
-	componentWillMount
-	componentDidMount
-	componentWillReceiveProps
-	shouldComponentUpdate
-	componentWillUpdate
-	componentDidUpdate
-	componentWillUnmount
-	clickHandlers or eventHandlers like onClickSubmit() or onChangeDescription()
-	getter methods for render like getSelectReason() or getFooterContent()
-	Optional render methods like renderNavigation() or renderProfilePicture()
-	render
-*/
-
 @withStyles(icon)
 class Icon extends React.Component {
   constructor(props) {
@@ -59,7 +33,7 @@ class Icon extends React.Component {
 	var componentClass = classNames('ui icon', this.props.className);
 
     return (
-	  <i className={componentClass}>
+	  <i {...this.props} className={componentClass}>
 		{this.props.children}
   	  </i>
     )

@@ -33,7 +33,7 @@ class Step extends React.Component {
 	var componentClass = classNames('step', this.props.className);
 
     return (
-      <div className={componentClass}>
+      <div {...this.props} className={componentClass}>
 	  	{this.props.children}
 	  </div>
     )
@@ -73,7 +73,7 @@ class Steps extends React.Component {
 	var componentClass = classNames('ui steps', this.props.className);
 
     return (
-      <div className={componentClass}>
+      <div {...this.props} className={componentClass}>
 	  	{this.props.children}
 	  </div>
     )

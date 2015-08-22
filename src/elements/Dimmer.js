@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import loader from 'semantic-ui-css/components/loader.css';
+import dimmer from 'semantic-ui-css/components/dimmer.css';
 import withStyles from '../utils/withStyles'
 import classNames from 'classnames';
 
@@ -11,8 +11,8 @@ const defaultProps = {
 	className: ''
 };
 
-@withStyles(loader)
-class Loader extends React.Component {
+@withStyles(dimmer)
+class Dimmer extends React.Component {
   constructor(props) {
     super(props);
 
@@ -30,7 +30,7 @@ class Loader extends React.Component {
   componentWillUnmount() {}
 
   render() {
-	var componentClass = classNames('ui loader', this.props.className);
+	var componentClass = classNames('ui dimmer', this.props.className);
 
     return (
       <div {...this.props} className={componentClass}>
@@ -40,7 +40,7 @@ class Loader extends React.Component {
   };
 }
 
-Loader.propTypes = propTypes;
-Loader.defaultProps = defaultProps;
+Dimmer.propTypes = propTypes;
+Dimmer.defaultProps = defaultProps;
 
-export default Loader;
+export default Dimmer;

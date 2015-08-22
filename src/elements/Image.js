@@ -4,40 +4,13 @@ import withStyles from '../utils/withStyles'
 import classNames from 'classnames';
 
 const propTypes = {
-	className: PropTypes.string,
-	src: PropTypes.string
+	className: PropTypes.string
 };
 
 const defaultProps = {
-	className: '',
-	src: ''
+	className: ''
 };
 
-/*
-	Ordering for React.createClass:
-
-	displayName
-	propTypes
-	contextTypes
-	childContextTypes
-	mixins
-	statics
-	defaultProps
-	getDefaultProps
-	getInitialState
-	getChildContext
-	componentWillMount
-	componentDidMount
-	componentWillReceiveProps
-	shouldComponentUpdate
-	componentWillUpdate
-	componentDidUpdate
-	componentWillUnmount
-	clickHandlers or eventHandlers like onClickSubmit() or onChangeDescription()
-	getter methods for render like getSelectReason() or getFooterContent()
-	Optional render methods like renderNavigation() or renderProfilePicture()
-	render
-*/
 
 @withStyles(image)
 class Image extends React.Component {
@@ -61,7 +34,7 @@ class Image extends React.Component {
 	var componentClass = classNames('ui image', this.props.className);
 
     return (
-      <img src={this.props.src} className={componentClass}>
+      <img {...this.props} className={componentClass}>
 	  	{this.props.children}
 	  </img>
     )
