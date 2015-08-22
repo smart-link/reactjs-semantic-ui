@@ -2,5 +2,6 @@ node_modules
 dist
 bower_components
 .git
+.idea
 ncp-debug.log
 npm-debug.log
