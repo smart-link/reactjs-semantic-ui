@@ -22,12 +22,11 @@
   },
   "homepage": "https://github.com/smart-link/reactjs-semantic-ui#readme",
   "peerDependencies": {
-      "Semantic-UI": "^2.0.8"
   },
   "dependencies": {
-      "Semantic-UI": "^2.0.8"
+      "react": "^0.13.3"
   },
   "devDependencies": {
-      "Semantic-UI": "^2.0.8"
+      "semantic-ui-css": "^2.0.8"
   }
 }
