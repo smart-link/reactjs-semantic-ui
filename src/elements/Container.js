@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import button from 'semantic-ui-css/components/button.css';
+import container from 'semantic-ui-css/components/container.css';
 import withStyles from '../utils/withStyles';
 import classNames from 'classnames';
 
@@ -37,8 +37,8 @@ const defaultProps = {
 	render
 */
 
-@withStyles(button)
-class Button extends React.Component {
+@withStyles(container)
+class Container extends React.Component {
   constructor(props) {
     super(props);
 
@@ -56,17 +56,17 @@ class Button extends React.Component {
   componentWillUnmount() {}
 
   render() {
-	var componentClass = classNames('ui button', this.props.className);
+	var componentClass = classNames('ui container', this.props.className);
 
     return (
-      <button className={componentClass}>
-        {this.props.children}
-	  </button>
+      <div className={componentClass}>
+	  	{this.props.children}
+	  </div>
     )
   };
 }
 
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
+Container.propTypes = propTypes;
+Container.defaultProps = defaultProps;
 
-export default Button;
+export default Container;

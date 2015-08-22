@@ -5,7 +5,7 @@ module.exports = {
 	output: {
 		path: './dist',
 		filename: '[name].js',
-		library: 'ReactSemanticUI',
+		library: 'RSU',
 		libraryTarget: 'umd'
 	},
 	module: {
@@ -20,9 +20,20 @@ module.exports = {
 				loader: 'style-loader!css-loader'
 			},
 			{
-				test: /\.(png|jpg)$/,
+				test: /\.(png|jpg|svg|eot|woff|woff2|ttf)$/,
 				loader: 'url-loader?limit=8192'
 			} // inline base64 URLs for <=8k images, direct URLs for the rest
         ]
-	}
+	},
+
+	externals: [
+    {
+      'react': {
+        root: 'React',
+        commonjs2: 'react',
+        commonjs: 'react',
+        amd: 'react'
+      }
+    }
+  ]
 };

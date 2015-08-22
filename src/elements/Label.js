@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import button from 'semantic-ui-css/components/button.css';
-import withStyles from '../utils/withStyles';
+import label from 'semantic-ui-css/components/label.css';
+import withStyles from '../utils/withStyles'
 import classNames from 'classnames';
 
 const propTypes = {
@@ -37,8 +37,8 @@ const defaultProps = {
 	render
 */
 
-@withStyles(button)
-class Button extends React.Component {
+@withStyles(label)
+class Label extends React.Component {
   constructor(props) {
     super(props);
 
@@ -56,17 +56,17 @@ class Button extends React.Component {
   componentWillUnmount() {}
 
   render() {
-	var componentClass = classNames('ui button', this.props.className);
+	var componentClass = classNames('ui label', this.props.className);
 
     return (
-      <button className={componentClass}>
-        {this.props.children}
-	  </button>
+      <div className={componentClass}>
+	  	{this.props.children}
+	  </div>
     )
   };
 }
 
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
+Label.propTypes = propTypes;
+Label.defaultProps = defaultProps;
 
-export default Button;
+export default Label;

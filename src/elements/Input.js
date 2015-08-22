@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import button from 'semantic-ui-css/components/button.css';
-import withStyles from '../utils/withStyles';
+import input from 'semantic-ui-css/components/input.css';
+import withStyles from '../utils/withStyles'
 import classNames from 'classnames';
 
 const propTypes = {
@@ -37,8 +37,8 @@ const defaultProps = {
 	render
 */
 
-@withStyles(button)
-class Button extends React.Component {
+@withStyles(input)
+class Input extends React.Component {
   constructor(props) {
     super(props);
 
@@ -56,17 +56,17 @@ class Button extends React.Component {
   componentWillUnmount() {}
 
   render() {
-	var componentClass = classNames('ui button', this.props.className);
+	var componentClass = classNames('ui input', this.props.className);
 
     return (
-      <button className={componentClass}>
-        {this.props.children}
-	  </button>
+      <div className={componentClass}>
+	  	{this.props.children}
+	  </div>
     )
   };
 }
 
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
+Input.propTypes = propTypes;
+Input.defaultProps = defaultProps;
 
-export default Button;
+export default Input;
