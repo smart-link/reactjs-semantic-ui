@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Reactjs Semantic UI </title>
+    <link rel="stylesheet" href="../../node_modules/semantic-ui-css/components/reset.css"/>
+</head>
+<body>
+
+<h1> Reactjs Semantic UI [Collections] </h1>
+<div id="app"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+<script src="../../dist/reactjs-semantic-ui.js"></script>
+<script type="text/jsx">
+    var Breadcrumb = RSU.Breadcrumb,
+        BreadcrumbDivider = RSU.BreadcrumbDivider,
+        BreadcrumbSection = RSU.BreadcrumbSection,
+        Form = RSU.Form,
+        Grid = RSU.Grid,
+        Column  = RSU.Column,
+        Row  = RSU.Row,
+        Menu = RSU.Menu,
+        Message = RSU.Message,
+        Table = RSU.Table;
+
+    var BreadcrumbSystem = React.createClass({
+        render: function () {
+            return (
+                <Breadcrumb>
+                    <BreadcrumbSection> Home </BreadcrumbSection>
+                    <BreadcrumbDivider>/</BreadcrumbDivider>
+                    <BreadcrumbSection> bread </BreadcrumbSection>
+                    <BreadcrumbDivider>/</BreadcrumbDivider>
+                    <BreadcrumbSection> crumb </BreadcrumbSection>
+                </Breadcrumb>
+            );
+        }
+    });
+
+    var FormSystem = React.createClass({
+        render: function () {
+            return (
+                <Form>
+
+                </Form>
+            );
+        }
+    });
+
+    var GridSystem = React.createClass({
+        render: function () {
+            return (
+                <Grid className="four column">
+                    <Row>
+                        <Column>Row1</Column>
+                        <Column>Row1</Column>
+                        <Column>Row1</Column>
+                    </Row>
+                    <Column>Row2</Column>
+                    <Column>Row2</Column>
+                    <Column>Row2</Column>
+                    <Column>Row2</Column>
+                </Grid>
+            );
+        }
+    });
+
+    var MenuSystem = React.createClass({
+        render: function () {
+            return (
+                <Menu className="three item">
+                    <a className="active item"> Developer </a>
+                    <a className="item"> Designer </a>
+                    <a className="item"> Product Manager </a>
+                </Menu>
+            );
+        }
+    });
+
+    var MessageSystem = React.createClass({
+        render: function () {
+            return (
+                <Message className="icon">
+                    <i className="notched circle loading icon"></i>
+                    <div className="content">
+                        <div className="header">
+                            Please wait for the DJ.
+                        </div>
+                        <p>
+                            We're fetching that musics for you.
+                        </p>
+                    </div>
+                </Message>
+            );
+        }
+    });
+
+    var TableSystem = React.createClass({
+        render: function () {
+            var arrayList = [
+                1,2,3
+            ];
+            return (
+                <Table className="celled striped">
+                    <thead>
+                        <tr>
+                            <th colSpan={3}>
+                                Git repository
+                            </th>
+                        </tr>
+                        <tbody>
+                            {
+                                arrayList.map(function (data) {
+                                    return (
+                                        <tr>
+                                            <td>
+                                                <i className="right aligned collapsing"> {data} </i>
+                                            </td>
+                                            <td>
+                                                {data} haha
+                                            </td>
+                                            <td>
+                                                {data} hihi
+                                            </td>
+                                        </tr>
+                                    );
+                                })
+                            }
+                        </tbody>
+                    </thead>
+                </Table>
+            );
+        }
+    });
+
+    var All = React.createClass({
+        render: function () {
+            return(
+                <div>
+                    <BreadcrumbSystem></BreadcrumbSystem>
+                    <GridSystem></GridSystem>
+                    <FormSystem></FormSystem>
+                    <MenuSystem></MenuSystem>
+                    <MessageSystem></MessageSystem>
+                    <TableSystem></TableSystem>
+                </div>
+            );
+        }
+    });
+
+    React.render(
+        <All />, document.getElementById('app')
+    );
+</script>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import table from 'semantic-ui-css/components/table.css';
+import message from '../../../node_modules/semantic-ui-css/components/message.css';
 import classNames from 'classnames';
 
 const propTypes = {
@@ -10,7 +10,7 @@ const defaultProps = {
     className: ''
 };
 
-class Table extends React.Component {
+class Message extends React.Component {
     constructor(props) {
         super(props);
 
@@ -28,15 +28,15 @@ class Table extends React.Component {
     componentWillUnmount() {}
 
     render() {
-        var componentClass = classNames('ui table', this.props.className);
+        var componentClass = classNames('ui message', this.props.className);
         return (
-            <div className={componentClass}>
+            <div {...this.props} className={componentClass}>
                 {this.props.children}
             </div>
         )
     };
 }
-Table.propTypes = propTypes;
-Table.defaultProps = defaultProps;
+Message.propTypes = propTypes;
+Message.defaultProps = defaultProps;
 
-export default Table;
+export default Message;

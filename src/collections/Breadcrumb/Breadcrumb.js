@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import grid from 'semantic-ui-css/components/grid.css';
+import breadcrumb from '../../../node_modules/semantic-ui-css/components/breadcrumb.css';
+import classNames from 'classnames';
 
 const propTypes = {
     className: PropTypes.string
@@ -9,7 +10,7 @@ const defaultProps = {
     className: ''
 };
 
-class Grid extends React.Component {
+class Breadcrumb extends React.Component {
     constructor(props) {
         super(props);
 
@@ -27,15 +28,15 @@ class Grid extends React.Component {
     componentWillUnmount() {}
 
     render() {
-        var componentClass = classNames('ui grid', this.props.className);
+        var componentClass = classNames('ui breadcrumb', this.props.className);
         return (
-            <div className={componentClass}>
+            <div {...this.props} className={componentClass}>
                 {this.props.children}
             </div>
         )
     };
 }
-Grid.propTypes = propTypes;
-Grid.defaultProps = defaultProps;
+Breadcrumb.propTypes = propTypes;
+Breadcrumb.defaultProps = defaultProps;
 
-export default Grid;
+export default Breadcrumb;

@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import menu from 'semantic-ui-css/components/menu.css';
+import grid from '../../../node_modules/semantic-ui-css/components/grid.css';
 import classNames from 'classnames';
 
 const propTypes = {
@@ -10,7 +10,7 @@ const defaultProps = {
     className: ''
 };
 
-class Menu extends React.Component {
+class Grid extends React.Component {
     constructor(props) {
         super(props);
 
@@ -28,15 +28,15 @@ class Menu extends React.Component {
     componentWillUnmount() {}
 
     render() {
-        var componentClass = classNames('ui menu', this.props.className);
+        var componentClass = classNames('ui grid', this.props.className);
         return (
-            <div className={componentClass}>
+            <div {...this.props} className={componentClass}>
                 {this.props.children}
             </div>
         )
     };
 }
-Menu.propTypes = propTypes;
-Menu.defaultProps = defaultProps;
+Grid.propTypes = propTypes;
+Grid.defaultProps = defaultProps;
 
-export default Menu;
+export default Grid;

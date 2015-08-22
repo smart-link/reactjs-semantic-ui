@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import form from 'semantic-ui-css/components/form.css';
+import form from '../../../node_modules/semantic-ui-css/components/form.css';
+import classNames from 'classnames';
 
 const propTypes = {
     className: PropTypes.string
@@ -29,9 +30,9 @@ class Form extends React.Component {
     render() {
         var componentClass = classNames('ui form', this.props.className);
         return (
-            <div className={componentClass}>
+            <form {...this.props} className={componentClass}>
                 {this.props.children}
-            </div>
+            </form>
         )
     };
 }

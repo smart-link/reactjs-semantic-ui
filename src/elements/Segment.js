@@ -1,8 +1,7 @@
 import React, { PropTypes, Component } from 'react';
-import button from 'semantic-ui-css/components/button.css';
-import withStyles from '../utils/withStyles';
+import segment from 'semantic-ui-css/components/segment.css';
+import withStyles from '../utils/withStyles'
 import classNames from 'classnames';
-
 
 const propTypes = {
 	className: PropTypes.string,
@@ -38,8 +37,8 @@ const defaultProps = {
 	render
 */
 
-@withStyles(button)
-class Button extends React.Component {
+@withStyles(segment)
+class Segment extends React.Component {
   constructor(props) {
     super(props);
 
@@ -57,17 +56,17 @@ class Button extends React.Component {
   componentWillUnmount() {}
 
   render() {
-	var componentClass = classNames('ui button', this.props.className);
+	var componentClass = classNames('ui segment', this.props.className);
 
     return (
-      <button className={componentClass}>
-        {this.props.children}
-	  </button>
+      <div className={componentClass}>
+	  	{this.props.children}
+	  </div>
     )
   };
 }
 
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
+Segment.propTypes = propTypes;
+Segment.defaultProps = defaultProps;
 
-export default Button;
+export default Segment;

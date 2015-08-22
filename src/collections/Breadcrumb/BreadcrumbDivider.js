@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import message from 'semantic-ui-css/components/message.css';
 import classNames from 'classnames';
 
 const propTypes = {
@@ -10,7 +9,7 @@ const defaultProps = {
     className: ''
 };
 
-class Message extends React.Component {
+class BreadcrumbDivider extends React.Component {
     constructor(props) {
         super(props);
 
@@ -28,15 +27,15 @@ class Message extends React.Component {
     componentWillUnmount() {}
 
     render() {
-        var componentClass = classNames('ui message', this.props.className);
+        var componentClass = classNames('divider', this.props.className);
         return (
-            <div className={componentClass}>
+            <span {...this.props} className={componentClass}>
                 {this.props.children}
-            </div>
+            </span>
         )
     };
 }
-Message.propTypes = propTypes;
-Message.defaultProps = defaultProps;
+BreadcrumbDivider.propTypes = propTypes;
+BreadcrumbDivider.defaultProps = defaultProps;
 
-export default Message;
+export default BreadcrumbDivider;

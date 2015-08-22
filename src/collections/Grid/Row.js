@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import breadcrumb from 'semantic-ui-css/components/breadcrumb.css';
 import classNames from 'classnames';
 
 const propTypes = {
@@ -10,7 +9,7 @@ const defaultProps = {
     className: ''
 };
 
-class Breadcrumb extends React.Component {
+class Row extends React.Component {
     constructor(props) {
         super(props);
 
@@ -28,15 +27,15 @@ class Breadcrumb extends React.Component {
     componentWillUnmount() {}
 
     render() {
-        var componentClass = classNames('ui breadcrumb', this.props.className);
+        var componentClass = classNames('column row', this.props.className);
         return (
-            <div className={componentClass}>
+            <div {...this.props} className={componentClass}>
                 {this.props.children}
             </div>
         )
     };
 }
-Breadcrumb.propTypes = propTypes;
-Breadcrumb.defaultProps = defaultProps;
+Row.propTypes = propTypes;
+Row.defaultProps = defaultProps;
 
-export default Breadcrumb;
+export default Row;

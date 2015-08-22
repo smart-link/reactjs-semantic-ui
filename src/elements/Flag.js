@@ -1,8 +1,7 @@
 import React, { PropTypes, Component } from 'react';
-import button from 'semantic-ui-css/components/button.css';
-import withStyles from '../utils/withStyles';
+import flag from 'semantic-ui-css/components/flag.css';
+import withStyles from '../utils/withStyles'
 import classNames from 'classnames';
-
 
 const propTypes = {
 	className: PropTypes.string,
@@ -38,8 +37,8 @@ const defaultProps = {
 	render
 */
 
-@withStyles(button)
-class Button extends React.Component {
+@withStyles(flag)
+class Flag extends React.Component {
   constructor(props) {
     super(props);
 
@@ -57,17 +56,17 @@ class Button extends React.Component {
   componentWillUnmount() {}
 
   render() {
-	var componentClass = classNames('ui button', this.props.className);
+	var componentClass = classNames('flag', this.props.className);
 
     return (
-      <button className={componentClass}>
-        {this.props.children}
-	  </button>
+      <i className={componentClass}>
+		  {this.props.children}
+	  </i>
     )
   };
 }
 
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
+Flag.propTypes = propTypes;
+Flag.defaultProps = defaultProps;
 
-export default Button;
+export default Flag;
