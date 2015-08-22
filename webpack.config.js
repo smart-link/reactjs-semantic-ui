@@ -17,6 +17,7 @@ module.exports = {
             },
 			{
 				test: /\.css$/,
+                exclude: /\.useable\.css$/,
 				loader: 'style-loader!css-loader'
 			},
 			{

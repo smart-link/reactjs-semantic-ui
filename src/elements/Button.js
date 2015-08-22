@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import button from 'semantic-ui-css/components/button.css';
 import withStyles from '../utils/withStyles'
 
+
 const propTypes = {
 	className: PropTypes.string,
 };
