@@ -1,0 +1,4 @@
+node_modules
+.git
+ncp-debug.log
+npm-debug.log

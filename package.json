@@ -1,0 +1,33 @@
+{
+  "name": "reactjs-semantic-ui",
+  "version": "1.0.0",
+  "description": "semantic-ui for reactjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smart-link/reactjs-semantic-ui.git"
+  },
+  "keywords": [
+    "reactjs",
+    "semantic-ui",
+    "css"
+  ],
+  "author": "dane_yun, kyutae.kang, youngmoon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smart-link/reactjs-semantic-ui/issues"
+  },
+  "homepage": "https://github.com/smart-link/reactjs-semantic-ui#readme",
+  "peerDependencies": {
+      "Semantic-UI": "^2.0.8"
+  },
+  "dependencies": {
+      "Semantic-UI": "^2.0.8"
+  },
+  "devDependencies": {
+      "Semantic-UI": "^2.0.8"
+  }
+}
